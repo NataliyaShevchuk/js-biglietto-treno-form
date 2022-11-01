@@ -9,8 +9,71 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <div class="container">
+            <h1 class="text-center p-4">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
 
-    <script src="js/main.js"></script>
+            <div class="my-box bg-white rounded-2 p-4 px-5 text-center">
+                <ul class="navbar-nav flex-row justify-content-between px-5">
+                    <li class="nav-item">
+                        <h5 class="text-danger fw-light">Nome e Cognome</h5>
+                        <input class="form-control px-1 text-center" type="text" placeholder="John Snow">
+                    </li>
+                    <li class="nav-item">
+                        <h5 class="text-danger fw-light">Km da percorrere</h5>
+                        <input class="form-control px-1 text-center" type="number" placeholder="10">
+                    </li>
+                    <li class="nav-item">
+                        <h5 class="text-danger fw-light">Fascia d'età</h5>
+                        <select name="Fascia d'età " id="" class="form-select rounded-2">
+                            <option value="maggiorenne">Maggiorenne</option>
+                            <option value="Minorenne">Minorenne</option>
+                            <option value="Over-65">Over 65</option>
+                        </select>
+                    </li>
+                </ul>
+                <div class="pt-5">
+                    <button class="mx-3 bg-secondary bg-gradient text-danger btn fw-bold">Genera</button>
+                    <button class="mx-3 bg-secondary bg-gradient text-danger btn fw-bold">Annulla</button>
+                </div>
+            </div>
+                <h1 class="text-center pt-4">IL TUO BIGLIETTO</h1>
+                <div class="my-box bg-white p-4 px-5 text-center">
+                    <h5 class="text-start">DETTAGLIO PASSEGGERI</h5>
+                    <div class="row  border-top border-bottom border-dark">
+                        <div class="col-4 px-0">
+                            <div class="my-col-container">
+                                <h5 class="fw-bold fs-3">NOME PASSEGGERO</h5>
+                                <p class="fs-4 fw-bold pb-5">John Snow</p>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="my-col-container">
+                                <h6 class="fw-bold pb-5">Offerta</h6>
+                                <p class="pb-5 px-2">Biglietto Standard</p>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="my-col-container">
+                                <h6 class="fw-bold pb-5">Carrozza</h6>
+                                <p class="pb-5">5</p>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="my-col-container">
+                                <h6 class="fw-bold pb-5">Codice CP</h6>
+                                <p class="pb-5">numero</p>
+                            </div>
+                        </div>
+                        <div class="col-2 pe-0">
+                            <div class="my-col-container">
+                                <h6 class="fw-bold pb-5">Costo biglietto</h6>
+                                <p class="pb-5">numero</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </div>
+
+    <!-- <script src="js/main.js"></script> -->
 </body>
 </html>

@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: brown;
+}
+h1{
+    color:white;
+}
+.my-box{
+    width: 100%;
+}
+.my-col-container{
+    background-color: lightsteelblue;
+    padding: 1rem;
+    text-align: start;
+}
