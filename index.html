@@ -12,30 +12,30 @@
     <div class="container">
             <h1 class="text-center p-4">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
 
-            <div class="my-box bg-white rounded-2 p-4 px-5 text-center">
+            <form class="my-box bg-white rounded-2 p-4 px-5 text-center">
                 <ul class="navbar-nav flex-row justify-content-between px-5">
                     <li class="nav-item">
                         <h5 class="text-danger fw-light">Nome e Cognome</h5>
-                        <input class="form-control px-1 text-center" type="text" placeholder="John Snow">
+                        <input name="username" class="form-control px-1 text-center" type="text" placeholder="John Snow">
                     </li>
                     <li class="nav-item">
                         <h5 class="text-danger fw-light">Km da percorrere</h5>
-                        <input class="form-control px-1 text-center" type="number" placeholder="10">
+                        <input name="km" class="form-control px-1 text-center" type="number" placeholder="10">
                     </li>
                     <li class="nav-item">
                         <h5 class="text-danger fw-light">Fascia d'età</h5>
-                        <select name="Fascia d'età " id="" class="form-select rounded-2">
-                            <option value="maggiorenne">Maggiorenne</option>
-                            <option value="Minorenne">Minorenne</option>
+                        <select name="Fascia d'età " id="age" class="sconto form-select rounded-2">
+                            <option value="40">Maggiorenne</option>
+                            <option value="20">Minorenne</option>
                             <option value="Over-65">Over 65</option>
                         </select>
                     </li>
                 </ul>
                 <div class="pt-5">
-                    <button class="mx-3 bg-secondary bg-gradient text-danger btn fw-bold">Genera</button>
-                    <button class="mx-3 bg-secondary bg-gradient text-danger btn fw-bold">Annulla</button>
+                    <button type="button" id="genera" class="mx-3 bg-secondary bg-gradient text-danger btn fw-bold">Genera</button>
+                    <button type="reset" id="annulla" class="mx-3 bg-secondary bg-gradient text-danger btn fw-bold">Annulla</button>
                 </div>
-            </div>
+            </form>
                 <h1 class="text-center pt-4">IL TUO BIGLIETTO</h1>
                 <div class="my-box bg-white p-4 px-5 text-center">
                     <h5 class="text-start">DETTAGLIO PASSEGGERI</h5>
@@ -67,13 +67,13 @@
                         <div class="col-2 pe-0">
                             <div class="my-col-container bg-transparent">
                                 <h6 class="fw-bold pb-6">Costo biglietto</h6>
-                                <p class="pb-2">€</p>
+                                <span id="finalPrice" class="pb-2"> €</span>
                             </div>
                         </div>
                     </div>
                 </div>
     </div>
 
-    <!-- <script src="js/main.js"></script> -->
+    <script src="js/main.js"></script>
 </body>
 </html>

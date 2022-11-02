@@ -1,20 +1,69 @@
-const userKm = prompt ("Ciao quanti km vuoi percorrere oggi?");
-const userAge = prompt ("Quanti anni hai?");
-const price = Math.round(userKm * .21);
-const priceFull = (userAge >= 18 && userAge < 65) === price;
+const km = 10;
+const age = 40;
+const prezzoBase = Math.round(km * .21);
+const prezzoFinale = (age >= 18 && age < 65) === prezzoFinale;
 
-price.toFixed (0);
+prezzoBase.toFixed (0);
 
-console.log("Km che il passeggero desidera percorrere:", userKm);
-console.log("L'età del passeggero:", userAge);
-
-if (userAge < 18 ) {
-    console.log("Il passeggero è minorenne, pagherà:", ( price * .8));
-} else if ( userAge >= 65 ) {
-    console.log("Il passeggero è over 65, pagherà:", ( price * .6));
-} else {
-    console.log("Il prezzo è di:", price);
+if ( isNaN( km ) ) {
+    alert( "I chilometri inseriti sono errati" );
 }
+
+console.log("Km che il passeggero desidera percorrere:", km);
+console.log("L'età del passeggero:", age);
+
+if (age < 18 ) {
+    console.log("Il passeggero è minorenne, pagherà:", ( prezzoBase * .8));
+} else if ( age >= 65 ) {
+    console.log("Il passeggero è over 65, pagherà:", ( prezzoBase * .6));
+} else {
+    console.log("Il prezzo è di:", prezzoBase);
+}
+
+const ageEl = document.getElementById( "age" );
+const kmEl = document.getElementById( "km" );
+const discountEl = document.getElementById( "discount" );
+const finalPriceEl = document.getElementById( "finalPrice" );
+
+ageEl.innerHTML = age;
+kmEl.innerHTML = km;
+
+if ( scontoDaApplicare ) {
+    discountEl.innerHTML = scontoDaApplicare;
+}
+
+// finalPriceEl.innerHTML = "€ " + prezzoFinale.toFixed( 2 );
+finalPriceEl.innerHTML = `€ ${ prezzoFinale.toFixed( 2 ) }`;
+
+const btnGenera = document.getElementById("genera");
+
+btnGenera.addEventListener("click", function (){
+    const usernameInput = document.querySelector( "[name= 'username']" );
+    const kmInput = document.querySelector ( "[name= 'km']" );
+    const ageInput = document.querySelector( "[name='age']" );
+    const scontoInput = document.querySelector( "[name='sconto']" );
+
+    const usernameValue = usernameInput.value;
+    const kmValue = kmInput.value;
+    const ageValue = ageInput.value;
+
+    kmInput.value = ageInput.value;
+    ageValue.innerHTML = ageValue; 
+
+    const prezzoBase = kmInput.value * .21;
+    let scontoDaApplicare = 0;
+
+    if (ageInput.value !=="");{
+        scontoDaApplicare = ageInput.value;
+    }
+
+    const prezzoScontato = prezzoBase - ( prezzoBase * scontoDaApplicare / 100 );
+
+    console.log( "prezzo finale", prezzoScontato );
+})
+
+
+
 
 //MILESTONE 1:
 //Iniziamo implementando il programma senza alcuna estetica: usando esclusivamente due input e un bottone (non stilizzati), 
